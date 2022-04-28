@@ -1,0 +1,117 @@
+@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+@import url("https://fonts.googleapis.com/css2?family=Kirang+Haerang&display=swap");
+/* CSS Document */
+
+
+	
+	HTML CSS JSResult Skip Results Iframe
+EDIT ON
+html {
+  margin:0;
+  overflow:hidden;
+  background:#000;
+  color:white;
+  font-family:Arial;
+}
+
+/*$toggle-nub-color: #FF686B; */
+body {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  background: #ffffff;
+  font-family: "Kirang Haerang";
+  font-size: 40px;
+}
+
+.toggle {
+  margin-top: 20px;
+  margin-left: 20px;
+}
+.toggle input[type=checkbox] {
+  display: none;
+}
+.toggle label {
+  color: 0;
+  position: relative;
+  z-index: 100;
+}
+.toggle input[type=checkbox] + label::before {
+  content: " ";
+  display: block;
+  height: 18px;
+  width: 200px;
+  border: 1px solid #000000;
+  border-radius: 9px;
+  position: absolute;
+  top: 11px;
+  left: 222px;
+  background: #ffffff;
+  transition: all 1.5s ease;
+}
+.toggle input[type=checkbox] + label::after {
+  content: " ";
+  display: block;
+  height: 30px;
+  width: 30px;
+  border: 1px solid #80170b;
+  border-radius: 50%;
+  position: absolute;
+  top: 5px;
+  left: 215px;
+  background: #80170b;
+  transition: all 1.5s ease;
+}
+.toggle input[type=checkbox]:checked + label::after {
+  left: 396px;
+  transition: all 1.5s ease;
+  border: 1px solid #000000;
+  background: #ffffff;
+}
+.toggle input[type=checkbox]:checked + label::before {
+  background: #80170b;
+  transition: all 1.5s ease;
+  border: 1px solid #80170b;
+}
+.toggle input[type=checkbox]:checked + label {
+  color: 0;
+}
+.message{
+  padding:20px;
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%, -50%);
+  background:black;
+  cursor:pointer;
+  font-size:14px;
+  border:1px solid white;
+}
+
+#badge{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 92px;
+}
+
+
+a:link, a:hover, a:visited, a:active{
+  color:white;
+  text-decoration: none;
+}
+.experiment-url{
+  position:absolute;
+  bottom:10px;
+  right:10px;
+  padding:8px;
+  z-index: 1;
+  font-size: 11px;
+  background:black;
+  letter-spacing:0.5px;
+  border: 1px solid white;
+}
+
